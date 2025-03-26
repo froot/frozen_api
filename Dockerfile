@@ -7,4 +7,4 @@ RUN bundle install
 
 COPY . ./
 
-CMD ["bin/rails", "server"]
+CMD ["bin/rails", "server", "-b", "0.0.0.0"]
