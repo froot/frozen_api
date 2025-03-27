@@ -1,4 +1,4 @@
 scrape_configs:
   - job_name: "rails_app"
     static_configs:
-      - targets: ["localhost:3000"]
+      - targets: ["frozen-api-121627085123.us-central1.run.app"]
