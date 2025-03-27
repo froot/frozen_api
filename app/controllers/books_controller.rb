@@ -13,6 +13,9 @@ class BooksController < ApplicationController
 
   def show
     logger.info("Processing books show request...")
+    @book.process
+    logger.info("Finished processing book.")
+
     render json: @book
   end
 
