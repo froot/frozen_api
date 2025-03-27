@@ -12,7 +12,7 @@ class AuthorsController < ApplicationController
   private
 
   def set_author
-    @author = Author.find_by(id: params[:id])
+    @author = Author.find_by(id: params[:id].to_i)
     render json: { error: "Author not found" }, status: 404 unless author
   end
 end

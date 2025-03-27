@@ -19,7 +19,7 @@ class BooksController < ApplicationController
   private
 
   def set_book
-    @book = Book.find_by(id: params[:id])
+    @book = Book.find_by(id: params[:id].to_i)
     render json: { error: "Book not found" }, status: 404 unless @book
   end
 
