@@ -3,14 +3,7 @@ class BooksController < ApplicationController
   before_action :set_author, only: [:index], if: -> { params[:author_id].present? }
 
   def index
-    begin
-      1 / 0
-    rescue ZeroDivisionError => exception
-      Sentry.capture_exception(exception)
-    end
-    
-    Sentry.capture_message("test message")
-
+    logger.info("Processing books index request...")
     if @author
       render json: Book.where(author_id: @author.id)
     else
@@ -19,6 +12,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    logger.info("Processing books show request...")
     render json: @book
   end
 

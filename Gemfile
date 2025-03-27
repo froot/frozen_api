@@ -30,6 +30,7 @@ gem 'concurrent-ruby', '1.3.4'
 gem 'sentry-ruby'
 gem 'sentry-rails'
 gem 'prometheus-client'
+gem 'stackdriver'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
